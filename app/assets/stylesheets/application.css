@@ -18,8 +18,8 @@
 * {
 	padding: 0;
 	margin: 0;
-	text-decoration: none;
 	box-sizing: border-box;
+	color: #000;
 }
 
 /*clearfix*/
@@ -35,6 +35,16 @@ body {
 	font-family: verdana, arial, helvetica, sans-serif;
 	margin: 33px;
 	line-height: 18px;
+	font-size: 13px;
+}
+
+table {
+	text-align: left; /*表のテキストを左揃え*/
+}
+
+th {
+	font-weight: normal; /*表のテキストを細字に*/
+	height: 26px;
 }
 
 /*formの設定*/
@@ -60,13 +70,38 @@ strong {
 p {
 	margin: 33px;
 	line-height: 18px;
-	font-size: 13px;
 }
 
-a {
+.top-a-tag {
 	text-decoration: underline;
 	color: #808080;
 }
+
+/*投稿一覧 and 新規投稿作成*/
+.books-table {
+	margin: 17px 0 0 5px;
+	font-size: 13px;
+}
+
+thead th {
+	text-align: center;
+	font-weight: bold;
+
+}
+
+tbody tr {
+	padding: 10px 0;
+}
+
+.book-body {
+	padding: 0 15px;
+}
+
+
+.book-form {
+	margin-top: 20px;
+}
+
 
 
 

@@ -1,39 +1,25 @@
-<h1><strong>Book</strong></h1>
+<h1><strong>Books</strong></h1>
 
-<div>
-	<table>
-		<tr>
-			<th>Title</th>
-			<th>Body</th>
-		</tr>
+
+<table class="books-table">
+	<thead>
+		<th class="column-title">Title</th>
+		<th class="column-title">Body</th>
+	</thead>
+	<tbody>
 		<% @books.each do |book| %>
-			<tr>
-				<th><%= book.title %></th>
-				<th><%= book.body %></th>
+			<tr class="">
+				<th class="book-title"><%= book.title %></th>
+				<th class="book-body"><%= book.body %></th>
+				<th class="links">
+					<%= link_to 'Show', book_path(book.id) %> | 
+					<%= link_to 'Edit', edit_book_path(book.id) %> | 
+					<%= link_to 'Destroy', book_path(book.id), method: :'delete' %>
+				</th>
 			</tr>
 		<% end %>
-	</table>
-</div>
+	</tbody>
+</table>
 
-
-<div>
-	<h4>New book</h4>
-	<%= form_for(@book) do |f| %>
-		<!-- タイトル -->
-		<div class="field">
-			<%= f.label :title  %>
-			<%= f.text_field :title %>
-		</div>
-
-		<!-- 本文 -->
-		<div class="field">
-			<%= f.label :body %>
-			<%= f.text_area :body %>
-		</div>
-
-		<!-- 送信ボタン -->
-		<div class="field">
-			<%= f.submit 'Create Book' %>
-		</div>
-	<% end %>
-</div>
+<!-- フォームの貼り付け -->
+<%= render 'form',button_text: 'New' %>

@@ -1,0 +1,21 @@
+<div class="book-form">
+	<h4>New book</h4>
+	<%= form_for(@book) do |f| %>
+		<!-- タイトル -->
+		<div class="field">
+			<%= f.label :title  %>
+			<%= f.text_field :title %>
+		</div>
+
+		<!-- 本文 -->
+		<div class="field">
+			<%= f.label :body %>
+			<%= f.text_area :body %>
+		</div>
+
+		<!-- 送信ボタン -->
+		<div class="field">
+			<%= f.submit "#{button_text} Book" %>
+		</div>
+	<% end %>
+</div>
