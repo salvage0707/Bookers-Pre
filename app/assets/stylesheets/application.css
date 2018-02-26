@@ -38,8 +38,22 @@ body {
 	font-size: 13px;
 }
 
+h1 {
+	font-size: 26px;
+}
+
+p {
+	margin: 33px;
+}
+
+strong {
+	font-weight: bold; /*文字を太文字に*/
+}
+
 table {
 	text-align: left; /*表のテキストを左揃え*/
+	margin: 17px 0 0 5px;
+	font-size: 13px;
 }
 
 th {
@@ -53,40 +67,29 @@ label {
 	font-size: 15px;
 }
 
-.field {
+.field { /*フォームのアイテム設定*/
 	display: block;
 	margin-top: 15px;
 }
 
+.book-form {
+	margin-top: 20px;
+}
+
+
 /*top*/
-h1 {
-	font-size: 26px;
-}
 
-strong {
-	font-weight: bold;
-}
 
-p {
-	margin: 33px;
-	line-height: 18px;
-}
-
-.top-a-tag {
+.top-a-tag { /*トップの<a>の設定*/
 	text-decoration: underline;
-	color: #808080;
+	color: #808080; /*グレー*/
 }
 
 /*投稿一覧 and 新規投稿作成*/
-.books-table {
-	margin: 17px 0 0 5px;
-	font-size: 13px;
-}
 
 thead th {
 	text-align: center;
 	font-weight: bold;
-
 }
 
 tbody tr {
@@ -95,11 +98,6 @@ tbody tr {
 
 .book-body {
 	padding: 0 15px;
-}
-
-
-.book-form {
-	margin-top: 20px;
 }
 
 
